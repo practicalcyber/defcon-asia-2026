@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>AI & AI Security Kampung — DEF CON Asia 2026</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #0b0f14;
+      overflow: hidden;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    img.slide {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      opacity: 0;
+      transition: opacity 600ms ease-in-out;
+    }
+    img.slide.active { opacity: 1; }
+    .dots {
+      position: fixed;
+      bottom: 14px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      z-index: 10;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #30363d;
+      cursor: pointer;
+      transition: background 200ms;
+    }
+    .dot.active { background: #58a6ff; }
+  </style>
+</head>
+<body>
+  <img class="slide active" src="schedule.001.png?v=3" alt="Schedule">
+  <img class="slide" src="schedule.002.png?v=3" alt="How to think about your mission">
+  <img class="slide" src="schedule.003.png?v=3" alt="M1 — Signal Extractor">
+  <img class="slide" src="schedule.004.png?v=3" alt="M2 — Stealth Architect">
+  <img class="slide" src="schedule.005.png?v=3" alt="M3 — TDD Speedrun">
+  <img class="slide" src="schedule.006.png?v=3" alt="What the judges are listening for">
+  <div class="dots"></div>
+  <script>
+    const slides = document.querySelectorAll('img.slide');
+    const dotsContainer = document.querySelector('.dots');
+    let current = 0;
+    slides.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => show(i));
+      dotsContainer.appendChild(d);
+    });
+    const dots = document.querySelectorAll('.dot');
+    function show(i) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = i;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+    function next() { show((current + 1) % slides.length); }
+    let timer = setInterval(next, 12000);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') { clearInterval(timer); next(); timer = setInterval(next, 12000); }
+      else if (e.key === 'ArrowLeft') { clearInterval(timer); show((current - 1 + slides.length) % slides.length); timer = setInterval(next, 12000); }
+    });
+  </script>
+</body>
+</html>

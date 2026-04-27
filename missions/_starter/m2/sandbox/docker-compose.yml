@@ -1,0 +1,37 @@
+# Stealth Architect sandbox — safe-by-default scaffold.
+#
+# Rules baked into this compose:
+#   - All published ports bind to 127.0.0.1 explicitly.
+#   - Internal-only network for inter-service traffic.
+#   - No privileged containers. No host network. No bind mounts of host paths.
+#
+# `validators/compose_policy.py` will reject any change that breaks the above.
+
+services:
+
+  redirector:
+    image: nginx:1.27-alpine
+    container_name: m2_redirector
+    ports:
+      - "127.0.0.1:8080:80"
+    networks:
+      - public_facing
+    restart: "no"
+
+  c2_backend:
+    image: python:3.12-alpine
+    container_name: m2_c2_backend
+    command: ["python", "-m", "http.server", "9090", "--bind", "0.0.0.0"]
+    networks:
+      - internal
+    restart: "no"
+    # Note: 0.0.0.0 inside the container is FINE — the container is on an
+    # `internal: true` network, so it cannot reach the host or the public
+    # internet. The deterministic gate is the network attribute, not the bind.
+
+networks:
+  public_facing:
+    driver: bridge
+  internal:
+    driver: bridge
+    internal: true

@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.coverage
+.coverage.*
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Demos — runtime artefacts
+demos/d1-rag-injection/.chroma/
+demos/d2-safety-bypass/runsheet.local.md
+
+# OS
+.DS_Store
+Thumbs.db

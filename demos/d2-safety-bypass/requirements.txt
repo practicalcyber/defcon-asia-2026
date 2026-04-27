@@ -1,0 +1,4 @@
+anthropic>=0.40
+# Optional — uncomment to enable provider swap:
+# openai>=1.40
+# google-genai>=0.8
