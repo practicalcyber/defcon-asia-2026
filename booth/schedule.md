@@ -197,8 +197,8 @@ style: |
 
 <div class="qr-center">
   <img src="qr/booth-site.png">
-  <h3>defcon.practical-cyber.com</h3>
-  <p>Slides · talks · missions · starter kits — all open</p>
+  <h3>github.com/practicalcyber/defcon-asia-2026</h3>
+  <p>Slides · talks · missions · starter kits — clone, fork, run</p>
 </div>
 
 <div class="footer">
