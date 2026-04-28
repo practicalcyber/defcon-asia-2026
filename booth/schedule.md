@@ -72,11 +72,10 @@ style: |
     font-size: 17px;
     color: #c9d1d9;
   }
-  .qr-grid { display: flex; justify-content: space-around; align-items: center; gap: 60px; margin-top: 40px; }
-  .qr-cell { text-align: center; flex: 1; }
-  .qr-cell img { width: 200px; height: 200px; background: #fff; padding: 8px; border-radius: 8px; display: block; margin: 0 auto; }
-  .qr-cell h3 { margin-top: 14px; font-size: 18px; }
-  .qr-cell p { font-size: 14px; color: #8b949e; margin-top: 4px; }
+  .qr-center { text-align: center; margin-top: 30px; }
+  .qr-center img { width: 260px; height: 260px; background: #fff; padding: 10px; border-radius: 8px; display: block; margin: 0 auto; }
+  .qr-center h3 { margin-top: 14px; font-size: 22px; }
+  .qr-center p { font-size: 16px; color: #8b949e; margin-top: 4px; }
 ---
 
 # AI & AI Security Kampung
@@ -196,17 +195,10 @@ style: |
 
 <p class="lead">Everything from this Kampung — talks, missions, demos, starter kits, slides — is open.</p>
 
-<div class="qr-grid">
-  <div class="qr-cell">
-    <img src="qr/booth-site.png">
-    <h3>defcon.practical-cyber.com</h3>
-    <p>This screen — the whole deck</p>
-  </div>
-  <div class="qr-cell">
-    <img src="qr/github-repo.png">
-    <h3>github.com/practicalcyber/defcon-asia-2026</h3>
-    <p>All source · talks · starter kits</p>
-  </div>
+<div class="qr-center">
+  <img src="qr/booth-site.png">
+  <h3>defcon.practical-cyber.com</h3>
+  <p>Slides · talks · missions · starter kits — all open</p>
 </div>
 
 <div class="footer">
