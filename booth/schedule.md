@@ -193,12 +193,12 @@ style: |
 
 <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; align-items: center;">
   <div style="text-align:center;">
-    <img src="qr/booth-site.png" style="width: 280px; height: 280px; background:#fff; padding: 12px; border-radius: 8px;">
+    <img src="qr/booth-site.png" style="width: 200px; height: 200px; background:#fff; padding: 10px; border-radius: 8px;">
     <h3 style="margin-top: 14px;">defcon.practical-cyber.com</h3>
     <p style="font-size: 16px; color:#8b949e; margin-top:4px;">This screen — the whole deck</p>
   </div>
   <div style="text-align:center;">
-    <img src="qr/github-repo.png" style="width: 280px; height: 280px; background:#fff; padding: 12px; border-radius: 8px;">
+    <img src="qr/github-repo.png" style="width: 200px; height: 200px; background:#fff; padding: 10px; border-radius: 8px;">
     <h3 style="margin-top: 14px;">github.com/practicalcyber/defcon-asia-2026</h3>
     <p style="font-size: 16px; color:#8b949e; margin-top:4px;">All source · talks · starter kits</p>
   </div>
