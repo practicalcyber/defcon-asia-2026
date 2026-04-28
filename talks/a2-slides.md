@@ -18,6 +18,8 @@ style: |
   table { width: 100%; border-collapse: collapse; font-size: 19px; }
   th { background: #161b22; color: #58a6ff; text-align: left; padding: 10px 14px; border-bottom: 2px solid #58a6ff; }
   td { padding: 10px 14px !important; border-bottom: 1px solid #30363d !important; vertical-align: top !important; color: #e6edf3 !important; background: transparent !important; }
+  tbody tr { background: transparent !important; }
+  tbody tr:nth-child(even) { background: transparent !important; }
   tbody tr:last-child td { border-bottom: 2px solid #58a6ff !important; }
   ul, ol { font-size: 22px; line-height: 1.5; }
   li { margin-bottom: 8px; }
