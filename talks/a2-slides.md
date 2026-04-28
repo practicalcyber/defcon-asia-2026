@@ -67,6 +67,10 @@ style: |
   .ratio .write { flex: 20; background: #f0883e; display: flex; align-items: center; justify-content: center; color: #0b0f14; font-weight: 600; }
   footer { color: #6e7681; font-size: 13px; }
   section::after { color: #6e7681; }
+  .qr-grid { display: flex; justify-content: space-around; align-items: center; gap: 60px; margin-top: 24px; }
+  .qr-cell { text-align: center; flex: 1; }
+  .qr-cell img { width: 190px; height: 190px; background: #fff; padding: 8px; border-radius: 8px; display: block; margin: 0 auto; }
+  .qr-cell p { margin-top: 10px; font-size: 16px; color: #58a6ff; }
 ---
 
 # Vibe Coding Live
@@ -258,14 +262,14 @@ That's the bar. That's the 98/2. That's the Translator capability in your IDE.
 
 <h2 style="color:#58a6ff; font-size:26px; margin-top:14px;">"I architect. AI types. If you cannot tell me which line you'd reject, you're not vibe coding — you're being driven."</h2>
 
-<div style="display:grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 24px; align-items: center;">
-  <div style="text-align:center;">
-    <img src="../booth/qr/booth-site.png" style="width: 220px; height: 220px; background:#fff; padding: 10px; border-radius: 8px;">
-    <p style="margin-top: 8px; font-size: 16px; color:#58a6ff;">defcon.practical-cyber.com</p>
+<div class="qr-grid">
+  <div class="qr-cell">
+    <img src="../booth/qr/booth-site.png">
+    <p>defcon.practical-cyber.com</p>
   </div>
-  <div style="text-align:center;">
-    <img src="../booth/qr/github-repo.png" style="width: 220px; height: 220px; background:#fff; padding: 10px; border-radius: 8px;">
-    <p style="margin-top: 8px; font-size: 16px; color:#58a6ff;">github.com/practicalcyber/defcon-asia-2026</p>
+  <div class="qr-cell">
+    <img src="../booth/qr/github-repo.png">
+    <p>github.com/practicalcyber/defcon-asia-2026</p>
   </div>
 </div>
 

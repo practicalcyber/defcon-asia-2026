@@ -59,6 +59,10 @@ style: |
   .ratio-label { display: flex; justify-content: space-between; font-size: 14px; color: #8b949e; }
   footer { color: #6e7681; font-size: 13px; }
   section::after { color: #6e7681; }
+  .qr-grid { display: flex; justify-content: space-around; align-items: center; gap: 60px; margin-top: 30px; }
+  .qr-cell { text-align: center; flex: 1; }
+  .qr-cell img { width: 190px; height: 190px; background: #fff; padding: 8px; border-radius: 8px; display: block; margin: 0 auto; }
+  .qr-cell p { margin-top: 10px; font-size: 16px; color: #58a6ff; }
 ---
 
 # AI Red Teaming
@@ -276,14 +280,14 @@ Come find me at the booth. Show me what you're building.
 
 <h2 style="color:#58a6ff; font-size:30px; margin-top:20px;">"AI's value comes from your data.<br>Its security comes from your framework."</h2>
 
-<div style="display:grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 28px; align-items: center;">
-  <div style="text-align:center;">
-    <img src="../booth/qr/booth-site.png" style="width: 220px; height: 220px; background:#fff; padding: 10px; border-radius: 8px;">
-    <p style="margin-top: 8px; font-size: 16px; color:#58a6ff;">defcon.practical-cyber.com</p>
+<div class="qr-grid">
+  <div class="qr-cell">
+    <img src="../booth/qr/booth-site.png">
+    <p>defcon.practical-cyber.com</p>
   </div>
-  <div style="text-align:center;">
-    <img src="../booth/qr/github-repo.png" style="width: 220px; height: 220px; background:#fff; padding: 10px; border-radius: 8px;">
-    <p style="margin-top: 8px; font-size: 16px; color:#58a6ff;">github.com/practicalcyber/defcon-asia-2026</p>
+  <div class="qr-cell">
+    <img src="../booth/qr/github-repo.png">
+    <p>github.com/practicalcyber/defcon-asia-2026</p>
   </div>
 </div>
 
