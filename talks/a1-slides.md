@@ -272,6 +272,17 @@ Come find me at the booth. Show me what you're building.
 
 # Close
 
-<h2 style="color:#58a6ff; font-size:32px; margin-top:40px;">"AI's value comes from your data.<br>Its security comes from your framework."</h2>
+<h2 style="color:#58a6ff; font-size:30px; margin-top:20px;">"AI's value comes from your data.<br>Its security comes from your framework."</h2>
 
-<p style="margin-top:40px; font-size:18px; color:#8b949e;">Ethan Seow · Practical Cyber × C4AIL · DEF CON Asia 2026<br>defcon.practical-cyber.com</p>
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 28px; align-items: center;">
+  <div style="text-align:center;">
+    <img src="../booth/qr/booth-site.png" style="width: 220px; height: 220px; background:#fff; padding: 10px; border-radius: 8px;">
+    <p style="margin-top: 8px; font-size: 16px; color:#58a6ff;">defcon.practical-cyber.com</p>
+  </div>
+  <div style="text-align:center;">
+    <img src="../booth/qr/github-repo.png" style="width: 220px; height: 220px; background:#fff; padding: 10px; border-radius: 8px;">
+    <p style="margin-top: 8px; font-size: 16px; color:#58a6ff;">github.com/practicalcyber/defcon-asia-2026</p>
+  </div>
+</div>
+
+<p style="margin-top: 20px; font-size:16px; color:#8b949e; text-align:center;">Ethan Seow · ethan@practical-cyber.com</p>

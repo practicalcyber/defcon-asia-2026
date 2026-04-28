@@ -254,6 +254,17 @@ That's the bar. That's the 98/2. That's the Translator capability in your IDE.
 
 # Close
 
-<h2 style="color:#58a6ff; font-size:32px; margin-top:30px;">"I architect. AI types.<br>If you cannot tell me which line you'd reject,<br>you're not vibe coding —<br>you're being driven."</h2>
+<h2 style="color:#58a6ff; font-size:26px; margin-top:14px;">"I architect. AI types. If you cannot tell me which line you'd reject, you're not vibe coding — you're being driven."</h2>
 
-<p style="margin-top:40px; font-size:18px; color:#8b949e;">Ethan Seow · Practical Cyber × C4AIL · DEF CON Asia 2026<br>defcon.practical-cyber.com</p>
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 24px; align-items: center;">
+  <div style="text-align:center;">
+    <img src="../booth/qr/booth-site.png" style="width: 220px; height: 220px; background:#fff; padding: 10px; border-radius: 8px;">
+    <p style="margin-top: 8px; font-size: 16px; color:#58a6ff;">defcon.practical-cyber.com</p>
+  </div>
+  <div style="text-align:center;">
+    <img src="../booth/qr/github-repo.png" style="width: 220px; height: 220px; background:#fff; padding: 10px; border-radius: 8px;">
+    <p style="margin-top: 8px; font-size: 16px; color:#58a6ff;">github.com/practicalcyber/defcon-asia-2026</p>
+  </div>
+</div>
+
+<p style="margin-top: 18px; font-size:16px; color:#8b949e; text-align:center;">Ethan Seow · ethan@practical-cyber.com</p>
