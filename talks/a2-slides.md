@@ -145,6 +145,34 @@ The real loss is specific: **the cognitive trace** — the memory of why each de
 
 ---
 
+# The spec is the leverage
+
+<p class="lead">Your spec sheet is more powerful than the AI itself. Model choice is a knob. Spec quality is the multiplier.</p>
+
+- **Sean Grove (OpenAI), *The New Code*:** "the specification is the new source code." The model is a compiler; the spec is what you actually author.
+- **Karpathy (2026):** the most valuable artefact in an AI-native codebase is the written specification — the model is replaceable, the spec compounds.
+- **Kiro · GitHub spec-kit · Claude Code skills:** spec → plan → tasks is now the native loop. The agent doesn't free-associate; it executes against a written contract.
+- **The mechanic:** a sharp `.md` spec lets Opus produce production-grade output without burning toward a million-token context. The spec compresses intent so the model doesn't re-derive it every turn.
+- **The Translator move:** leaders don't write code, they write specs. That's how you commission AI work without becoming a coder — and it's how you stay accountable for what ships.
+
+<div class="callout"><strong>Practical rule:</strong> if your spec fits in a focused <code>.md</code> file with examples and rejection criteria, you can run a smaller context window with higher quality. The discipline is upstream of the model.</div>
+
+---
+
+# Where you actually run this
+
+<p class="lead">Browser chat is a toy. Real agentic engineering lives in Linux — because that's where your code will ship.</p>
+
+- **Secure VPS + container** is the substrate. Auto / bypass-permissions mode is reckless on your laptop and reasonable inside an isolated Docker container with a bounded blast radius.
+- **Why containers:** reproducible, network-bounded, snapshot-able, and the **same artefact** that goes to production. You stop testing in one environment and deploying to another.
+- **Spec lives in `.md`. Agent runs in a container. Deployment is the artefact you already tested.** That's the whole loop.
+- **Roost** — my open-source AI nest, the answer to OpenClaw. Self-hosted on a VPS, persistent memory, MCP tools, Guardian pre-flight checks on every tool call, autonomy levels (supervised / assisted / autonomous), cost limits, checkpoints + rollback.
+- <code>github.com/crazyguy106/roost</code> · one-command install on a fresh Ubuntu host · MIT-spirit · clone, fork, run.
+
+<div class="callout"><strong>The deployment story <em>is</em> the security story.</strong> An agent with bypass-permissions on your laptop is a breach waiting to happen. The same agent, same permissions, inside a container on a VPS, is just an engineer.</div>
+
+---
+
 # What you're about to see
 
 <p class="lead">A real security tool, built in front of you, in the next eighteen minutes.</p>
