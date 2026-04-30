@@ -1,0 +1,3 @@
+[submodule "tools/exploit-tool"]
+	path = tools/exploit-tool
+	url = https://github.com/practicalcyber/exploit-tool

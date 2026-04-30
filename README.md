@@ -35,6 +35,19 @@ Booth-decide. Whole day, every day. Modular content blocks the lead pulls on dem
 
 **Architect of the Quarter.** Scored on 98/2 split, AI-red-team resilience, real-world SG impact. Rubric: `booth/rubric.md`.
 
+## Related tools
+
+The kampung includes one tool from the wider Practical Cyber stack as a git submodule:
+
+- [`tools/exploit-tool/`](tools/exploit-tool) — single-console pentest platform built on authorization, scope, and audit. Correlates best-of-breed scanners; AI handles triage and reports. Repo: [github.com/practicalcyber/exploit-tool](https://github.com/practicalcyber/exploit-tool).
+
+To pull the submodule when cloning:
+```bash
+git clone --recursive https://github.com/practicalcyber/defcon-asia-2026
+# or, if you've already cloned without --recursive:
+git submodule update --init --recursive
+```
+
 ## Directory layout
 
 ```
