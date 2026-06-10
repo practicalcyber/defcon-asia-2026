@@ -91,7 +91,7 @@ DEF CON Asia 2026 — AI & AI Security Kampung
 
 <div class="stat-grid">
   <div class="stat"><div class="num">−19%</div><div class="label">Experienced devs <em>slower</em> on their own codebases with AI assistance — while believing they were 20% faster (METR RCT, 2025)</div></div>
-  <div class="stat"><div class="num">−17%</div><div class="label">Skill assessment drop for devs using AI coding assistants. Largest gaps in <em>comprehension and debugging</em> — the exact skills needed to verify AI output (Anthropic, 2025)</div></div>
+  <div class="stat"><div class="num">−17%</div><div class="label">Skill assessment drop for devs using AI coding assistants. Largest gaps in <em>comprehension and debugging</em> — the exact skills needed to verify AI output (Anthropic RCT, 2026)</div></div>
   <div class="stat"><div class="num">45%</div><div class="label">of AI-generated code contains security vulnerabilities without structural verification (Veracode, 2025)</div></div>
   <div class="stat"><div class="num">+98%</div><div class="label">PRs merged · review time grew only +91% — senior devs reviewing 6.5% more code while their own output declined (Faros AI, 10K+ devs)</div></div>
 </div>
@@ -301,6 +301,8 @@ except (BotoCoreError, ClientError) as e:
 Independent analysis of Claude Code's TypeScript source:
 
 > *"A simple while-loop that calls the model, runs tools, and repeats… **most of the code, however, lives in the systems around this loop.**"*
+
+<p class="lead">Their headline measurement: <strong>only 1.6% of Claude Code's codebase is AI decision logic — 98.4% is deterministic infrastructure</strong> (context management, tool routing, permission &amp; recovery). The 98/2 split, measured in the flagship agent.</p>
 
 The five values they extracted from the source:
 1. **Human decision authority** ← the rejection moment, peer-reviewed

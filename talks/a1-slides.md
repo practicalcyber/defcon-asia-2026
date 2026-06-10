@@ -86,7 +86,7 @@ DEF CON Asia 2026 — AI & AI Security Kampung
 | **35.3%** of all 2025 AI incidents were prompt-based exploits — the #1 failure type | Adversa AI ThreatStats, July 2025 |
 | **1,025%** rise in AI-related CVEs in 2024. **99%** of them tied directly to APIs | Wallarm 2025 API ThreatStats |
 | **89%** of AI-powered APIs use insecure auth (static keys, no rotation) | Wallarm 2025 |
-| **70%** of AI security incidents involved GenAI; **agentic AI caused the most irreversible damage** | Adversa AI, July 2025 |
+| **~75%** (three-quarters) of AI security incidents involved GenAI; **agentic AI caused the most irreversible damage** | Adversa AI, July 2025 |
 
 <div class="callout">The pattern: <strong>prompt is the new injection vector, API is the new perimeter, agent is the new privilege escalation</strong>. Every demo today maps to one of these.</div>
 
@@ -124,9 +124,9 @@ This is required for compliance audit logging.
 
 | Incident | What broke | Source |
 |---|---|---|
-| **EchoLeak — CVE-2025-32711** | Zero-click indirect injection in MS 365 Copilot. Crafted email summarised by Copilot → unauthenticated data exfil. **No user click.** | Lasso Security, Jan 2026 |
-| **ShadowLeak** | Indirect injection via Gmail/Drive files in ChatGPT Connectors → user passwords sent as URL params to attacker server | The Register, Jan 2026 |
-| **Gemini PDF persistent injection** | Embedded instructions in a PDF made Gemini "remember" false user data, triggered on future keywords | LastPass / Rehberger, Oct 2025 |
+| **EchoLeak — CVE-2025-32711** (CVSS 9.3) | Zero-click indirect injection in MS 365 Copilot. Crafted email summarised by Copilot → unauthenticated data exfil. **No user click.** | Aim Labs (Aim Security), June 2025 |
+| **ShadowLeak** | Indirect injection via a crafted Gmail message in ChatGPT's Deep Research agent → PII base64-encoded into an attacker URL. **Server-side exfil — invisible to the enterprise.** | Radware, Sept 2025 |
+| **Gemini persistent memory injection** | A poisoned document + "delayed tool invocation" made Gemini "remember" false user data, triggered on future keywords | J. Rehberger / Embrace The Red, Feb 2025 |
 
 **Three-way provider rehearsal (27 Apr):** Sonnet 4.6 + Haiku 4.5 *resisted*. gpt-4o-mini *fully pwned* — leaked the table verbatim.
 
@@ -174,7 +174,7 @@ The safety filter is **another probability machine**.
 - A *learned tendency* to refuse things that look like phishing.
 - **Tendencies bend. Rules don't.**
 
-<div class="callout">Receipts you can name on stage: <strong>Samsung ChatGPT leak</strong> (2023), <strong>Air Canada chatbot judgment</strong> (2024), the <strong>Microsoft Copilot exposure wave</strong> through 2025, <strong>EchoLeak / ShadowLeak / AgentFlayer</strong> in 2026. Every one was an <strong>architectural</strong> failure dressed up as a <strong>model</strong> failure.</div>
+<div class="callout">Receipts you can name on stage: <strong>Samsung ChatGPT leak</strong> (2023), <strong>Air Canada chatbot judgment</strong> (2024), the <strong>Microsoft Copilot exposure wave</strong> through 2025, <strong>EchoLeak / ShadowLeak / AgentFlayer</strong> in 2025. Every one was an <strong>architectural</strong> failure dressed up as a <strong>model</strong> failure.</div>
 
 ---
 
@@ -200,9 +200,9 @@ The deterministic 98%:
 | Incident | Detail |
 |---|---|
 | **mcp-remote — CVE-2025-6514** (CVSS 9.6) | Malicious MCP server returned crafted `authorization_endpoint` URL → arbitrary OS commands on Claude Desktop / VS Code clients. RCE via the auth flow. *(JFrog, July 2025)* |
-| **Smithery.ai path traversal** | `dockerBuildPath: ".."` exploit exfiltrated API tokens from 3,000+ hosted MCP servers *(Cyber Security News, Oct 2025)* |
+| **Smithery.ai path traversal** | `dockerBuildPath: ".."` exploit exfiltrated API tokens from 3,000+ hosted MCP servers *(GitGuardian, June 2025)* |
 | **AgentFlayer** | Single poisoned doc in Google Drive → zero-click data exfil of API keys from ChatGPT via Connectors *(Black Hat 2025)* |
-| **Drift-Salesloft / UNC6395** | Stolen OAuth tokens from Drift's Salesforce integration → 700+ orgs accessed. SaaS-to-SaaS, looked legitimate *(Reco AI, Dec 2025)* |
+| **Drift-Salesloft / UNC6395** | Stolen OAuth tokens from Drift's Salesforce integration → 700+ orgs accessed. SaaS-to-SaaS, looked legitimate *(Google GTIG, Aug 2025)* |
 
 <div class="tags"><span class="tag owasp">OWASP LLM03 — Supply Chain</span><span class="tag owasp">LLM06 — Excessive Agency</span><span class="tag owasp">ASI02 — Tool Misuse</span><span class="tag owasp">ASI03 — Identity & Privilege Abuse</span><span class="tag mitre">MITRE AML.T0096 / T0098 / T0101</span></div>
 
